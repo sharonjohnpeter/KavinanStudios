@@ -174,33 +174,37 @@ img {
   align-items: center;
 }
 
+
+/* ---------- HEADER LOGO IMAGE STYLES ---------- */
 .logo {
   display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 4px;
+  align-items: center;
 }
 
-.logo-main {
-  font-size: 1.6rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, var(--brand-orange), var(--brand-green));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.logo-accent {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--brand-green);
+.logo-image {
+  height: 55px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  transition: var(--transition);
 }
 
-.logo-tagline {
-  font-family: 'Caveat', cursive;
-  font-size: 0.8rem;
-  color: var(--brand-orange);
-  margin-left: 4px;
+.logo-image:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive logo for mobile */
+@media (max-width: 768px) {
+  .logo-image {
+    height: 45px;
+    max-width: 180px;
+  }
 }
 
 .desktop-nav {
@@ -727,11 +731,37 @@ img {
   margin-bottom: 40px;
 }
 
-.footer-logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: white;
-  margin-bottom: 12px;
+/* ---------- FOOTER LOGO IMAGE STYLES ---------- */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo-link {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.footer-logo-image {
+  height: 50px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: var(--transition);
+}
+
+.footer-logo-image:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Responsive footer logo for mobile */
+@media (max-width: 768px) {
+  .footer-logo-image {
+    height: 42px;
+    max-width: 170px;
+  }
 }
 
 .footer-logo span {
