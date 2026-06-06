@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact Us | Kavinan Design Studio | Let's Talk Design</title>
+  <meta name="description" content="Get in touch with Kavinan Design Studio. We'd love to hear about your project — residential, commercial, landscape, or turnkey. Based in Kumbakonam, Tamil Nadu.">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Contact Page CSS -->
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<!-- ==================== SITE HEADER (Shared across all pages) ==================== -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-main">KAVINAN</span>
+        <span class="logo-accent"> DESIGN</span>
+        <span class="logo-tagline">rooted with design</span>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="process.html" class="nav-link">Process</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      
+      <div class="header-cta">
+        <a href="contact.html" class="btn-primary btn-sm">
+          <i class="fas fa-calendar-check"></i> Book Consultation
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="process.html" class="nav-link">Process</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <a href="contact.html" class="btn-primary mobile-cta">Book Consultation</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ==================== PAGE HERO ==================== -->
+  <section class="page-hero">
+    <div class="hero-pattern"></div>
+    <div class="container">
+      <div class="hero-content" data-aos="fade-up">
+        <div class="hero-eyebrow">
+          <i class="fas fa-envelope-open-text"></i> say hello
+        </div>
+        <h1 class="hero-title">Let's <span class="text-gradient">Talk Design</span></h1>
+        <p class="hero-subtitle">We'd love to hear about your project and how we can help bring it to life.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper" data-aos="fade-right">
+          <div class="form-header">
+            <div class="script-text">rooted in purpose.</div>
+            <h2>Send us an <span class="text-gradient">Enquiry</span></h2>
+            <p>Tell us about your space, your story, and your vision. We'll bring the design and execution.</p>
+            <p class="response-note"><i class="fas fa-clock"></i> We respond within one business day.</p>
+          </div>
+          
+          <form id="contactForm" action="sendmail.php" method="POST">
+            <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Your Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Name">
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="hello@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="service"><i class="fas fa-cogs"></i> Service Required *</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="Architectural Design">Architectural Design</option>
+                <option value="Interior Design">Interior Design</option>
+                <option value="Landscape Design">Landscape Design</option>
+                <option value="Project Management">Project Management</option>
+                <option value="Construction">Construction</option>
+                <option value="Turnkey Solutions">Turnkey Solutions</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message"><i class="fas fa-comment-dots"></i> Project Details *</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us about your space, requirements, budget, and timeline..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="btn-text">Submit Enquiry</span>
+              <span class="btn-loader" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i> Sending...
+              </span>
+              <i class="fas fa-paper-plane btn-icon"></i>
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="contact-info-wrapper" data-aos="fade-left">
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>STUDIO ADDRESS</h3>
+            <p>Kumbakonam, Tamil Nadu, India</p>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>EMAIL ADDRESS</h3>
+            <p><a href="mailto:hello@kavinandesignstudio.com">hello@kavinandesignstudio.com</a></p>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>PHONE</h3>
+            <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <h3>INSTAGRAM</h3>
+            <p><a href="https://instagram.com/kavinandesignstudio" target="_blank">@kavinandesignstudio</a></p>
+          </div>
+          
+          <div class="business-hours">
+            <h4><i class="far fa-clock"></i> Business Hours</h4>
+            <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+            <p>Sunday: By appointment only</p>
+          </div>
+          
+          <div class="social-connect">
+            <h4>Connect With Us</h4>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MAP SECTION ==================== -->
+  <section class="map-section" data-aos="fade-up">
+    <div class="container">
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15653.616009060536!2d79.3667927!3d10.9599406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab4e8b1c7a7c1%3A0x3e8b3a6f8e5d7c2!2sKumbakonam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          width="100%" 
+          height="350" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="cta-section" data-aos="fade-up">
+    <div class="container">
+      <div class="cta-content">
+        <i class="fas fa-handshake cta-icon"></i>
+        <h2>Let's Build <span class="text-orange">Something Meaningful</span> Together</h2>
+        <p>From concept sketches to complete execution, Kavinan Design Studio delivers spaces designed to inspire.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn-primary btn-large">
+            <i class="fas fa-calendar-alt"></i> Schedule Consultation
+          </a>
+          <a href="projects.html" class="btn-outline-dark btn-large">
+            View Our Work <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== SITE FOOTER (Shared) ==================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">KAVINAN <span>DESIGN</span></div>
+        <p>Rooted with design. Built with vision.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li>Architectural Design</li>
+          <li>Interior Design</li>
+          <li>Landscape Design</li>
+          <li>Project Management</li>
+          <li>Construction</li>
+          <li>Turnkey Solutions</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <ul class="contact-list">
+          <li><i class="fas fa-map-marker-alt"></i> Kumbakonam, Tamil Nadu, India</li>
+          <li><i class="fas fa-phone-alt"></i> +91 98765 43210</li>
+          <li><i class="fas fa-envelope"></i> hello@kavinandesignstudio.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kavinan Design Studio. All rights reserved.</p>
+      <p class="footer-tags">ARCHITECTURE · INTERIOR · LANDSCAPE</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init({
+    once: true,
+    offset: 30,
+    duration: 700,
+    easing: 'ease-out-cubic'
+  });
+  
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+      const icon = menuToggle.querySelector('i');
+      if (mobileMenu.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  }
+  
+  // Close mobile menu when clicking a link
+  const mobileLinks = document.querySelectorAll('.mobile-nav a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    });
+  });
+  
+  // Form submission with SweetAlert and Preloader
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const btnText = submitBtn.querySelector('.btn-text');
+  const btnLoader = submitBtn.querySelector('.btn-loader');
+  const btnIcon = submitBtn.querySelector('.btn-icon');
+  
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      // Show preloader on button
+      btnText.style.display = 'none';
+      btnLoader.style.display = 'inline-flex';
+      btnIcon.style.display = 'none';
+      submitBtn.disabled = true;
+      
+      // Collect form data
+      const formData = new FormData(form);
+      
+      try {
+        const response = await fetch('sendmail.php', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        // Reset button state
+        btnText.style.display = 'inline';
+        btnLoader.style.display = 'none';
+        btnIcon.style.display = 'inline-flex';
+        submitBtn.disabled = false;
+        
+        if (result.success) {
+          // Success SweetAlert
+          Swal.fire({
+            title: 'Enquiry Sent!',
+            text: 'Thank you for reaching out. We will get back to you within one business day.',
+            icon: 'success',
+            confirmButtonColor: '#0F6B4B',
+            confirmButtonText: 'Great!',
+            background: '#F9F7F3',
+            customClass: {
+              popup: 'swal-popup-custom'
+            }
+          });
+          form.reset();
+        } else {
+          // Error SweetAlert
+          Swal.fire({
+            title: 'Something went wrong',
+            text: result.message || 'Please try again or contact us directly.',
+            icon: 'error',
+            confirmButtonColor: '#F26522',
+            confirmButtonText: 'OK',
+            background: '#F9F7F3'
+          });
+        }
+      } catch (error) {
+        // Reset button state
+        btnText.style.display = 'inline';
+        btnLoader.style.display = 'none';
+        btnIcon.style.display = 'inline-flex';
+        submitBtn.disabled = false;
+        
+        Swal.fire({
+          title: 'Connection Error',
+          text: 'Unable to send message. Please check your connection or try again later.',
+          icon: 'error',
+          confirmButtonColor: '#F26522',
+          confirmButtonText: 'OK'
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

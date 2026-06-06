@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Our Projects | Kavinan Design Studio | Portfolio of Architecture, Interiors & Landscapes</title>
+  <meta name="description" content="Explore Kavinan Design Studio's portfolio — residential villas, commercial offices, landscape retreats, and turnkey projects in Kumbakonam, Thanjavur, and across Tamil Nadu.">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Projects Page CSS -->
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+<!-- ==================== SITE HEADER (Shared across all pages) ==================== -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-main">KAVINAN</span>
+        <span class="logo-accent"> DESIGN</span>
+        <span class="logo-tagline">rooted with design</span>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="process.html" class="nav-link">Process</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      
+      <div class="header-cta">
+        <a href="contact.html" class="btn-primary btn-sm">
+          <i class="fas fa-calendar-check"></i> Book Consultation
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="process.html" class="nav-link">Process</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="btn-primary mobile-cta">Book Consultation</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ==================== PAGE HERO ==================== -->
+  <section class="page-hero">
+    <div class="hero-pattern"></div>
+    <div class="container">
+      <div class="hero-content" data-aos="fade-up">
+        <div class="hero-eyebrow">
+          <i class="fas fa-images"></i> our portfolio
+        </div>
+        <h1 class="hero-title">Selected <span class="text-gradient">Projects</span></h1>
+        <p class="hero-subtitle">Residential, commercial, office, landscape and turnkey work — designed to inspire and built to endure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FILTER BUTTONS ==================== -->
+  <section class="filter-section" data-aos="fade-up">
+    <div class="container">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="landscape">Landscape</button>
+        <button class="filter-btn" data-filter="turnkey">Turnkey</button>
+        <button class="filter-btn" data-filter="office">Office</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS GALLERY ==================== -->
+  <section class="projects-gallery">
+    <div class="container">
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project 1 - Residential -->
+        <div class="project-card" data-category="residential" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-image">
+            <img src="https://images.pexels.com/photos/323776/pexels-photo-323776.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern Villa Design">
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">
+              <span class="category-badge residential"><i class="fas fa-home"></i> Residential</span>
+            </div>
+            <h3>Modern Villa Design</h3>
+            <p class="project-location"><i class="fas fa-map-marker-alt"></i> Kumbakonam · 4,200 sqft</p>
+            <p class="project-desc">A contemporary villa with open floor plans, natural lighting, and sustainable materials. Features a central courtyard, private gardens, and minimalist interiors.</p>
+            <div class="project-tags">
+              <span>Architecture</span>
+              <span>Interior</span>
+              <span>Sustainable</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 - Residential -->
+        <div class="project-card" data-category="residential" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-image">
+            <img src="https://images.pexels.com/photos/1755776/pexels-photo-1755776.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Villa Interior Concept">
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">
+              <span class="category-badge residential"><i class="fas fa-couch"></i> Interior</span>
+            </div>
+            <h3>Villa Interior Concept</h3>
+            <p class="project-location"><i class="fas fa-map-marker-alt"></i> Thanjavur · 3,100 sqft</p>
+            <p class="project-desc">Luxury villa interior blending traditional Tamil elements with modern aesthetics. Custom furniture, warm lighting, and natural stone finishes.</p>
+            <div class="project-tags">
+              <span>Interior Design</span>
+              <span>Luxury</span>
+              <span>Custom Furniture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 - Commercial/Office -->
+        <div class="project-card" data-category="commercial" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Contemporary Office Build">
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">
+              <span class="category-badge commercial"><i class="fas fa-building"></i> Commercial</span>
+            </div>
+            <h3>Contemporary Office Build</h3>
+            <p class="project-location"><i class="fas fa-map-marker-alt"></i> Kumbakonam · 5,800 sqft</p>
+            <p class="project-desc">Modern corporate office with open work zones, glass facades, collaborative spaces, and biophilic design elements for enhanced productivity.</p>
+            <div class="project-tags">
+              <span>Commercial</span>
+              <span>Office Design</span>
+              <span>Biophilic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 - Landscape -->
+        <div class="project-card" data-category="landscape" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-image">
+            <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tropical Garden Retreat">
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">
+              <span class="category-badge landscape"><i class="fas fa-tree"></i> Landscape</span>
+            </div>
+            <h3>Tropical Garden Retreat</h3>
+            <p class="project-location"><i class="fas fa-map-marker-alt"></i> Tamil Nadu · 6,500 sqft</p>
+            <p class="project-desc">Lush tropical garden with native plant species, water features, meditation pavilions, and sustainable irrigation systems.</p>
+            <div class="project-tags">
+              <span>Landscape</span>
+              <span>Native Plants</span>
+              <span>Water Features</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 - Turnkey -->
+        <div class="project-card" data-category="turnkey" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-image">
+            <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Turnkey Family Residence">
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">
+              <span class="category-badge turnkey"><i class="fas fa-key"></i> Turnkey</span>
+            </div>
+            <h3>Turnkey Family Residence</h3>
+            <p class="project-location"><i class="fas fa-map-marker-alt"></i> Kumbakonam · 3,800 sqft</p>
+            <p class="project-desc">Complete turnkey solution from concept to handover. A 4-bedroom family home with custom interiors, modular kitchen, and outdoor deck.</p>
+            <div class="project-tags">
+              <span>Turnkey</span>
+              <span>Residential</span>
+              <span>Complete Build</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 - Office -->
+        <div class="project-card" data-category="office" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-image">
+            <img src="https://images.pexels.com/photos/276567/pexels-photo-276567.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Boutique Office Interior">
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">
+              <span class="category-badge office"><i class="fas fa-briefcase"></i> Office</span>
+            </div>
+            <h3>Boutique Office Interior</h3>
+            <p class="project-location"><i class="fas fa-map-marker-alt"></i> Thanjavur · 2,400 sqft</p>
+            <p class="project-desc">Boutique creative office space with warm tones, collaborative zones, breakout areas, and inspiring design elements for a growing team.</p>
+            <div class="project-tags">
+              <span>Office</span>
+              <span>Creative Space</span>
+              <span>Interior</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7 - Additional Residential -->
+        <div class="project-card" data-category="residential" data-aos="fade-up" data-aos-delay="600">
+          <div class="project-image">
+            <img src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Traditional Tamil Home">
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">
+              <span class="category-badge residential"><i class="fas fa-home"></i> Residential</span>
+            </div>
+            <h3>Traditional Tamil Home</h3>
+            <p class="project-location"><i class="fas fa-map-marker-alt"></i> Kumbakonam · 2,800 sqft</p>
+            <p class="project-desc">A heritage-inspired home with traditional architecture, courtyard planning, terracotta elements, and modern amenities.</p>
+            <div class="project-tags">
+              <span>Traditional</span>
+              <span>Heritage</span>
+              <span>Architecture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8 - Landscape -->
+        <div class="project-card" data-category="landscape" data-aos="fade-up" data-aos-delay="700">
+          <div class="project-image">
+            <img src="https://images.pexels.com/photos/2275518/pexels-photo-2275518.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rooftop Terrace Garden">
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">
+              <span class="category-badge landscape"><i class="fas fa-leaf"></i> Landscape</span>
+            </div>
+            <h3>Rooftop Terrace Garden</h3>
+            <p class="project-location"><i class="fas fa-map-marker-alt"></i> Thanjavur · 1,500 sqft</p>
+            <p class="project-desc">Modern rooftop garden with vertical planters, seating areas, and a sustainable drainage system.</p>
+            <div class="project-tags">
+              <span>Rooftop</span>
+              <span>Urban Garden</span>
+              <span>Sustainable</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div id="noResults" class="no-results" style="display: none;">
+        <i class="fas fa-search"></i>
+        <h3>No projects found</h3>
+        <p>Try selecting a different category to view more projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECT STATS SECTION ==================== -->
+  <section class="project-stats" data-aos="fade-up">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" data-aos="count-up" data-aos-delay="0">
+          <div class="stat-number">150+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card" data-aos="count-up" data-aos-delay="100">
+          <div class="stat-number">12+</div>
+          <div class="stat-label">Cities Served</div>
+        </div>
+        <div class="stat-card" data-aos="count-up" data-aos-delay="200">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+        <div class="stat-card" data-aos="count-up" data-aos-delay="300">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Design Awards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="cta-section" data-aos="fade-up">
+    <div class="container">
+      <div class="cta-content">
+        <i class="fas fa-handshake cta-icon"></i>
+        <h2>Let's Build <span class="text-orange">Something Meaningful</span> Together</h2>
+        <p>From concept sketches to complete execution, Kavinan Design Studio delivers spaces designed to inspire.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn-primary btn-large">
+            <i class="fas fa-calendar-alt"></i> Schedule Consultation
+          </a>
+          <a href="contact.html" class="btn-outline-dark btn-large">
+            Contact Us <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== SITE FOOTER (Shared) ==================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">KAVINAN <span>DESIGN</span></div>
+        <p>Rooted with design. Built with vision.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li>Architectural Design</li>
+          <li>Interior Design</li>
+          <li>Landscape Design</li>
+          <li>Project Management</li>
+          <li>Construction</li>
+          <li>Turnkey Solutions</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <ul class="contact-list">
+          <li><i class="fas fa-map-marker-alt"></i> Kumbakonam, Tamil Nadu, India</li>
+          <li><i class="fas fa-phone-alt"></i> +91 98765 43210</li>
+          <li><i class="fas fa-envelope"></i> hello@kavinandesignstudio.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kavinan Design Studio. All rights reserved.</p>
+      <p class="footer-tags">ARCHITECTURE · INTERIOR · LANDSCAPE</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init({
+    once: true,
+    offset: 30,
+    duration: 700,
+    easing: 'ease-out-cubic'
+  });
+  
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+      const icon = menuToggle.querySelector('i');
+      if (mobileMenu.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  }
+  
+  // Close mobile menu when clicking a link
+  const mobileLinks = document.querySelectorAll('.mobile-nav a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    });
+  });
+  
+  // ==================== FILTER FUNCTIONALITY ====================
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+  const noResults = document.getElementById('noResults');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      
+      const filterValue = button.getAttribute('data-filter');
+      let visibleCount = 0;
+      
+      projectCards.forEach(card => {
+        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+          card.style.display = 'block';
+          visibleCount++;
+          // Add animation
+          card.style.animation = 'fadeInUp 0.5s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      // Show/hide no results message
+      if (visibleCount === 0) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+      }
+    });
+  });
+  
+  // Animation for filter
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  `;
+  document.head.appendChild(style);
+  
+  // Animate stats numbers on scroll
+  const statNumbers = document.querySelectorAll('.stat-number');
+  const observerOptions = { threshold: 0.5, rootMargin: '0px' };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const text = el.innerText;
+        const isNumber = /[\d\+%]+/.test(text);
+        if (isNumber && !el.hasAttribute('data-counted')) {
+          el.setAttribute('data-counted', 'true');
+          const rawValue = text.replace(/[^0-9]/g, '');
+          const suffix = text.replace(/[0-9]/g, '');
+          let start = 0;
+          const end = parseInt(rawValue);
+          const duration = 1500;
+          const increment = end / (duration / 16);
+          const timer = setInterval(() => {
+            start += increment;
+            if (start >= end) {
+              el.innerText = end + suffix;
+              clearInterval(timer);
+            } else {
+              el.innerText = Math.floor(start) + suffix;
+            }
+          }, 16);
+        }
+        observer.unobserve(el);
+      }
+    });
+  }, observerOptions);
+  
+  statNumbers.forEach(num => observer.observe(num));
+  
+  // Lightbox functionality for project images
+  const projectLinks = document.querySelectorAll('.project-link');
+  projectLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const card = link.closest('.project-card');
+      const img = card.querySelector('.project-image img');
+      const title = card.querySelector('h3').innerText;
+      
+      // Create modal
+      const modal = document.createElement('div');
+      modal.className = 'image-modal';
+      modal.innerHTML = `
+        <div class="modal-content">
+          <span class="modal-close">&times;</span>
+          <img src="${img.src}" alt="${title}">
+          <h3>${title}</h3>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      document.body.style.overflow = 'hidden';
+      
+      // Close modal
+      modal.querySelector('.modal-close').addEventListener('click', () => {
+        modal.remove();
+        document.body.style.overflow = '';
+      });
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.remove();
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
