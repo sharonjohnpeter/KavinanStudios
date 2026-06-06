@@ -199,31 +199,6 @@ img {
   transform: scale(1.02);
 }
 
-
-/* ---------- HEADER LOGO IMAGE STYLES ---------- */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.logo-image {
-  height: 55px;
-  width: auto;
-  max-width: 220px;
-  object-fit: contain;
-  transition: var(--transition);
-}
-
-.logo-image:hover {
-  transform: scale(1.02);
-}
-
 /* Responsive logo for mobile */
 @media (max-width: 768px) {
   .logo-image {
