@@ -814,3 +814,241 @@ img {
 .swal-popup-custom {
   border-radius: 20px;
 }
+
+/* ---------- FIXED CONTACT PAGE MOBILE RESPONSIVE STYLES ---------- */
+
+/* Contact Section - Mobile Fix */
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 50px 0;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  /* Form Wrapper - Full width on mobile */
+  .contact-form-wrapper {
+    padding: 25px 20px;
+    border-radius: 24px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .form-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .form-header p {
+    font-size: 0.9rem;
+  }
+  
+  /* Form Row - Stack on mobile */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* Form inputs - Full width, no overflow */
+  .form-group {
+    margin-bottom: 18px;
+    width: 100%;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+  
+  /* Contact Info Cards - Full width */
+  .contact-info-wrapper {
+    gap: 15px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .info-card {
+    padding: 18px 20px;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .info-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+  
+  .info-card h3 {
+    font-size: 0.75rem;
+  }
+  
+  .info-card p,
+  .info-card a {
+    font-size: 0.85rem;
+    word-break: break-word;
+  }
+  
+  /* Business Hours Card */
+  .business-hours {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .business-hours h4 {
+    font-size: 1rem;
+  }
+  
+  .business-hours p {
+    font-size: 0.85rem;
+    word-break: break-word;
+  }
+  
+  /* Social Connect */
+  .social-connect {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .social-icons {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Devices (phones below 480px) */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .contact-form-wrapper {
+    padding: 20px 15px;
+  }
+  
+  .form-header h2 {
+    font-size: 1.4rem;
+  }
+  
+  .form-header .script-text {
+    font-size: 1.2rem;
+  }
+  
+  .response-note {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+  
+  .form-group label {
+    font-size: 0.85rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .info-card {
+    padding: 15px;
+  }
+  
+  .info-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  
+  .info-card h3 {
+    font-size: 0.7rem;
+  }
+  
+  .info-card p,
+  .info-card a {
+    font-size: 0.8rem;
+  }
+  
+  .business-hours p {
+    font-size: 0.8rem;
+  }
+  
+  .submit-btn {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Fix for very small devices (320px) */
+@media (max-width: 360px) {
+  .contact-form-wrapper {
+    padding: 15px 12px;
+  }
+  
+  .info-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .info-icon {
+    margin: 0 auto;
+  }
+  
+  .business-hours {
+    text-align: center;
+  }
+  
+  .business-hours h4 {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .map-container iframe {
+    height: 220px;
+  }
+}
+
+/* SweetAlert mobile fix */
+@media (max-width: 480px) {
+  .swal2-popup {
+    width: 90% !important;
+    padding: 20px !important;
+  }
+  
+  .swal2-title {
+    font-size: 1.3rem !important;
+  }
+  
+  .swal2-html-container {
+    font-size: 0.85rem !important;
+  }
+}
