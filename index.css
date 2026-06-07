@@ -225,6 +225,7 @@ img {
   max-width: 220px;
   object-fit: contain;
   transition: var(--transition);
+  
 }
 
 .logo-image:hover {
