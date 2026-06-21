@@ -33,13 +33,12 @@
         <a href="about.html" class="nav-link active">About</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="process.html" class="nav-link">Process</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="ourteam.html" class="nav-link">Our Team</a>
       </nav>
       
       <div class="header-cta">
         <a href="contact.html" class="btn-primary btn-sm">
-          <i class="fas fa-calendar-check"></i> Book Consultation
+          <i class="fas fa-calendar-check"></i> Contact Us
         </a>
       </div>
       
@@ -55,9 +54,8 @@
       <a href="about.html" class="nav-link active">About</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="projects.html" class="nav-link">Projects</a>
-      <a href="process.html" class="nav-link">Process</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-      <a href="contact.html" class="btn-primary mobile-cta">Book Consultation</a>
+      <a href="ourteam.html" class="nav-link">Our Team</a>
+      <a href="contact.html" class="btn-primary mobile-cta">Contact Us</a>
     </div>
   </div>
 </header>
@@ -207,50 +205,33 @@
     </div>
   </section>
 
-  <!-- ==================== TEAM SECTION ==================== -->
-  <section class="team-section" data-aos="fade-up">
+   <!-- ==================== WHAT MAKES US DIFFERENT ==================== -->
+  <section class="difference-section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
-        <div class="section-eyebrow">the minds behind</div>
-        <h2 class="section-title">Meet Our <span class="text-gradient">Creative Team</span></h2>
-        <p class="section-subtitle">Passionate architects, designers, and visionaries dedicated to your dream space.</p>
+        <div class="section-eyebrow">why choose us</div>
+        <h2 class="section-title">What Makes Our <span class="text-gradient">Process Different</span></h2>
       </div>
-      <div class="team-grid">
-        <div class="team-card" data-aos="flip-up" data-aos-delay="0">
-          <div class="team-image">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Lead Architect">
-          </div>
-          <h4>Ar. Kavin Anand</h4>
-          <span class="team-role">Founder & Principal Architect</span>
-          <p>15+ years of experience in sustainable architecture and design innovation.</p>
-          <div class="team-social">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
+      <div class="difference-grid">
+        <div class="difference-card" data-aos="zoom-in" data-aos-delay="0">
+          <i class="fas fa-eye"></i>
+          <h4>Transparent Communication</h4>
+          <p>Regular updates, open dialogue, and complete visibility into project progress.</p>
         </div>
-        <div class="team-card" data-aos="flip-up" data-aos-delay="100">
-          <div class="team-image">
-            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Interior Designer">
-          </div>
-          <h4>Priya Srinivasan</h4>
-          <span class="team-role">Senior Interior Designer</span>
-          <p>Specializes in spatial harmony, material curation, and modern aesthetics.</p>
-          <div class="team-social">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
+        <div class="difference-card" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fas fa-clipboard-list"></i>
+          <h4>Milestone-Based Tracking</h4>
+          <p>Clear milestones and payment schedules tied to project deliverables.</p>
         </div>
-        <div class="team-card" data-aos="flip-up" data-aos-delay="200">
-          <div class="team-image">
-            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Project Manager">
-          </div>
-          <h4>Ramesh Kumar</h4>
-          <span class="team-role">Project Manager</span>
-          <p>Ensures seamless execution, timeline adherence, and quality control.</p>
-          <div class="team-social">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
+        <div class="difference-card" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fas fa-clipboard-check"></i>
+          <h4>Quality Assurance</h4>
+          <p>Multi-level quality checks at every stage of the process.</p>
+        </div>
+        <div class="difference-card" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fas fa-headset"></i>
+          <h4>Dedicated Support</h4>
+          <p>Single point of contact for seamless coordination throughout the project.</p>
         </div>
       </div>
     </div>
@@ -319,7 +300,7 @@
         <ul class="contact-list">
           <li><i class="fas fa-map-marker-alt"></i> Kumbakonam, Tamil Nadu, India</li>
           <li><i class="fas fa-phone-alt"></i> +91 98765 43210</li>
-          <li><i class="fas fa-envelope"></i> hello@kavinandesignstudio.com</li>
+          <li><i class="fas fa-envelope"></i>ar.srk@kavinandesignstudio.com</li>
         </ul>
       </div>
     </div>
@@ -330,10 +311,10 @@
   </div>
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top-btn" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
 <!-- Scripts -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -409,6 +390,26 @@
   }, observerOptions);
   
   statNumbers.forEach(num => observer.observe(num));
+
+  // ========== BACK TO TOP BUTTON ==========
+const backToTopBtn = document.getElementById('backToTop');
+
+// Show/hide button based on scroll position
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
+});
+
+// Smooth scroll to top when clicked
+backToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 </script>
 </body>
 </html>

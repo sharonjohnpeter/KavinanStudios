@@ -33,13 +33,12 @@
         <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="process.html" class="nav-link">Process</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="ourteam.html" class="nav-link">Our Tem</a>
       </nav>
       
       <div class="header-cta">
         <a href="contact.html" class="btn-primary btn-sm">
-          <i class="fas fa-calendar-check"></i> Book Consultation
+          <i class="fas fa-calendar-check"></i> Contact Us
         </a>
       </div>
       
@@ -55,9 +54,8 @@
       <a href="about.html" class="nav-link">About</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="projects.html" class="nav-link">Projects</a>
-      <a href="process.html" class="nav-link">Process</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-      <a href="contact.html" class="btn-primary mobile-cta">Book Consultation</a>
+      <a href="ourteam.html" class="nav-link">Our Team</a>
+      <a href="contact.html" class="btn-primary mobile-cta">Contact Us</a>
     </div>
   </div>
 </header>
@@ -393,7 +391,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="process.html">Process</a></li>
+          <li><a href="ourteam.html">Our Team</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -413,7 +411,7 @@
         <ul class="contact-list">
           <li><i class="fas fa-map-marker-alt"></i> Kumbakonam, Tamil Nadu, India</li>
           <li><i class="fas fa-phone-alt"></i> +91 98765 43210</li>
-          <li><i class="fas fa-envelope"></i> hello@kavinandesignstudio.com</li>
+          <li><i class="fas fa-envelope"></i>ar.srk@kavinandesignstudio.com</li>
         </ul>
       </div>
     </div>
@@ -424,10 +422,10 @@
   </div>
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top-btn" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
 <!-- Scripts -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -476,6 +474,26 @@
       link.classList.add('active');
     }
   });
+
+  // ========== BACK TO TOP BUTTON ==========
+const backToTopBtn = document.getElementById('backToTop');
+
+// Show/hide button based on scroll position
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
+});
+
+// Smooth scroll to top when clicked
+backToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 </script>
 </body>
 </html>

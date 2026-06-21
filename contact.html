@@ -24,10 +24,10 @@
   <div class="container">
     <div class="header-inner">
       <div class="logo">
-  <a href="index.html" class="logo-link">
-    <img src="./image/kavinan-logo.png" alt="Kavinan Design Studio" class="logo-image">
-  </a>
-</div>
+        <a href="index.html" class="logo-link">
+          <img src="./image/kavinan-logo.png" alt="Kavinan Design Studio" class="logo-image">
+        </a>
+      </div>
       
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
@@ -35,13 +35,12 @@
         <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="process.html" class="nav-link">Process</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="ourteam.html" class="nav-link">Our Team</a>
       </nav>
       
       <div class="header-cta">
         <a href="contact.html" class="btn-primary btn-sm">
-          <i class="fas fa-calendar-check"></i> Book Consultation
+          <i class="fas fa-calendar-check"></i> Contact Us
         </a>
       </div>
       
@@ -57,9 +56,8 @@
       <a href="about.html" class="nav-link">About</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="projects.html" class="nav-link">Projects</a>
-      <a href="process.html" class="nav-link">Process</a>
-      <a href="contact.html" class="nav-link active">Contact</a>
-      <a href="contact.html" class="btn-primary mobile-cta">Book Consultation</a>
+      <a href="ourteam.html" class="nav-link">Our Team</a>
+      <a href="contact.html" class="btn-primary mobile-cta">Contact Us</a>
     </div>
   </div>
 </header>
@@ -95,7 +93,7 @@
           <form id="contactForm" action="sendmail.php" method="POST">
             <div class="form-group">
               <label for="name"><i class="fas fa-user"></i> Your Name *</label>
-              <input type="text" id="name" name="name" required placeholder="Name">
+              <input type="text" id="name" name="name" required placeholder="Your full name">
             </div>
             
             <div class="form-row">
@@ -152,7 +150,7 @@
               <i class="fas fa-envelope"></i>
             </div>
             <h3>EMAIL ADDRESS</h3>
-            <p><a href="mailto:hello@kavinandesignstudio.com">hello@kavinandesignstudio.com</a></p>
+            <p><a href="mailto:ar.srk@kavinandesignstudio.com">ar.srk@kavinandesignstudio.com</a></p>
           </div>
           
           <div class="info-card">
@@ -234,17 +232,17 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-  <a href="index.html" class="footer-logo-link">
-    <img src="./image/kavinan-logo.png" alt="Kavinan Design Studio" class="footer-logo-image">
-  </a>
-  <p>Rooted with design. Built with vision.</p>
-  <div class="social-links">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-  </div>
-</div>
+        <a href="index.html" class="footer-logo-link">
+          <img src="./image/kavinan-logo.png" alt="Kavinan Design Studio" class="footer-logo-image">
+        </a>
+        <p>Rooted with design. Built with vision.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
       <div class="footer-links">
         <h4>Explore</h4>
         <ul>
@@ -252,7 +250,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="process.html">Process</a></li>
+          <li><a href="ourteam.html">Our Team</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -272,7 +270,7 @@
         <ul class="contact-list">
           <li><i class="fas fa-map-marker-alt"></i> Kumbakonam, Tamil Nadu, India</li>
           <li><i class="fas fa-phone-alt"></i> +91 98765 43210</li>
-          <li><i class="fas fa-envelope"></i> hello@kavinandesignstudio.com</li>
+          <li><i class="fas fa-envelope"></i> ar.srk@kavinandesignstudio.com</li>
         </ul>
       </div>
     </div>
@@ -283,10 +281,10 @@
   </div>
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top-btn" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
 <!-- Scripts -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -328,16 +326,62 @@
     });
   });
   
-  // Form submission with SweetAlert and Preloader
+  // ========== CONTACT FORM WITH AJAX AND PRELOADER (From Reference) ==========
+  
   const form = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
   const btnText = submitBtn.querySelector('.btn-text');
   const btnLoader = submitBtn.querySelector('.btn-loader');
   const btnIcon = submitBtn.querySelector('.btn-icon');
   
-  if (form) {
-    form.addEventListener('submit', async function(e) {
+  // Prevent default form submission and handle via AJAX
+  form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+      
+      // Validation
+      if (!name || !phone || !email || !service || !message) {
+          Swal.fire({
+              icon: 'error',
+              title: 'Incomplete Form',
+              text: 'Please fill in all required fields.',
+              confirmButtonColor: '#0F6B4B',
+              background: '#F9F7F3'
+          });
+          return;
+      }
+      
+      // Email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+          Swal.fire({
+              icon: 'error',
+              title: 'Invalid Email',
+              text: 'Please enter a valid email address.',
+              confirmButtonColor: '#0F6B4B',
+              background: '#F9F7F3'
+          });
+          return;
+      }
+      
+      // Phone validation (Indian mobile number)
+      const phonePattern = /^[6-9]\d{9}$/;
+      if (!phonePattern.test(phone)) {
+          Swal.fire({
+              icon: 'error',
+              title: 'Invalid Phone Number',
+              text: 'Please enter a valid 10-digit Indian mobile number.',
+              confirmButtonColor: '#0F6B4B',
+              background: '#F9F7F3'
+          });
+          return;
+      }
       
       // Show preloader on button
       btnText.style.display = 'none';
@@ -345,65 +389,164 @@
       btnIcon.style.display = 'none';
       submitBtn.disabled = true;
       
-      // Collect form data
-      const formData = new FormData(form);
+      // Create FormData object
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('phone', phone);
+      formData.append('email', email);
+      formData.append('service', service);
+      formData.append('message', message);
       
       try {
-        const response = await fetch('sendmail.php', {
-          method: 'POST',
-          body: formData
-        });
-        
-        const result = await response.json();
-        
-        // Reset button state
-        btnText.style.display = 'inline';
-        btnLoader.style.display = 'none';
-        btnIcon.style.display = 'inline-flex';
-        submitBtn.disabled = false;
-        
-        if (result.success) {
-          // Success SweetAlert
-          Swal.fire({
-            title: 'Enquiry Sent!',
-            text: 'Thank you for reaching out. We will get back to you within one business day.',
-            icon: 'success',
-            confirmButtonColor: '#0F6B4B',
-            confirmButtonText: 'Great!',
-            background: '#F9F7F3',
-            customClass: {
-              popup: 'swal-popup-custom'
-            }
-          });
-          form.reset();
-        } else {
-          // Error SweetAlert
-          Swal.fire({
-            title: 'Something went wrong',
-            text: result.message || 'Please try again or contact us directly.',
-            icon: 'error',
-            confirmButtonColor: '#F26522',
-            confirmButtonText: 'OK',
-            background: '#F9F7F3'
-          });
-        }
+          // Send AJAX request to sendmail.php
+         const response = await fetch('./sendmail.php', {
+    method: 'POST',
+    body: formData
+});
+          const result = await response.json();
+          
+          // Hide preloader
+          btnText.style.display = 'inline-flex';
+          btnLoader.style.display = 'none';
+          btnIcon.style.display = 'inline-flex';
+          submitBtn.disabled = false;
+          
+          if (result.success) {
+              // Success SweetAlert
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Enquiry Sent Successfully!',
+                  html: `
+                      <div style="text-align: center;">
+                          <p>Thank you <strong style="color: #0F6B4B;">${escapeHtml(name)}</strong>!</p>
+                          <p>We have received your enquiry regarding <strong style="color: #0F6B4B;">${escapeHtml(service)}</strong>.</p>
+                          <div style="background: #EAE4DA; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                              <p style="margin: 0;">Our team will contact you within <strong>one business day</strong>.</p>
+                          </div>
+                      </div>
+                  `,
+                  confirmButtonColor: '#0F6B4B',
+                  confirmButtonText: '<i class="fas fa-check"></i> OK',
+                  background: '#F9F7F3'
+              });
+              
+              // Reset form
+              form.reset();
+              
+              // Remove focused class from all form groups
+              document.querySelectorAll('.form-group').forEach(group => {
+                  group.classList.remove('focused');
+              });
+          } else {
+              // Error SweetAlert
+              let errorMessage = result.message || 'There was an error sending your enquiry.';
+              if (result.errors && result.errors.length > 0) {
+                  errorMessage = '<ul style="text-align: left;">' + 
+                      result.errors.map(err => `<li>${escapeHtml(err)}</li>`).join('') + 
+                      '</ul>';
+              }
+              
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Submission Failed',
+                  html: `
+                      <div style="text-align: center;">
+                          <p>${errorMessage}</p>
+                          <div style="background: #EAE4DA; padding: 12px; border-radius: 8px; margin-top: 15px;">
+                              <p style="margin: 0; font-size: 14px;">
+                                  <i class="fas fa-phone" style="color: #0F6B4B;"></i> 
+                                  Call us directly: <a href="tel:+919876543210" style="color: #0F6B4B;">+91 98765 43210</a>
+                              </p>
+                              <p style="margin: 10px 0 0; font-size: 14px;">
+                                  <i class="fab fa-whatsapp" style="color: #25D366;"></i> 
+                                  WhatsApp: <a href="https://wa.me/919876543210" style="color: #0F6B4B;">Click to chat</a>
+                              </p>
+                          </div>
+                      </div>
+                  `,
+                  confirmButtonColor: '#0F6B4B',
+                  confirmButtonText: 'Try Again',
+                  background: '#F9F7F3'
+              });
+          }
       } catch (error) {
-        // Reset button state
-        btnText.style.display = 'inline';
-        btnLoader.style.display = 'none';
-        btnIcon.style.display = 'inline-flex';
-        submitBtn.disabled = false;
-        
-        Swal.fire({
-          title: 'Connection Error',
-          text: 'Unable to send message. Please check your connection or try again later.',
-          icon: 'error',
-          confirmButtonColor: '#F26522',
-          confirmButtonText: 'OK'
-        });
+          console.error('Error:', error);
+          
+          // Hide preloader
+          btnText.style.display = 'inline-flex';
+          btnLoader.style.display = 'none';
+          btnIcon.style.display = 'inline-flex';
+          submitBtn.disabled = false;
+          
+          // Connection error SweetAlert
+          Swal.fire({
+              icon: 'error',
+              title: 'Connection Error',
+              html: `
+                  <div style="text-align: center;">
+                      <p>Unable to connect to the server.</p>
+                      <div style="background: #EAE4DA; padding: 12px; border-radius: 8px; margin: 15px 0;">
+                          <p style="margin: 0;"><strong>Please contact us directly:</strong></p>
+                          <p style="margin: 10px 0 0;">
+                              <i class="fas fa-phone"></i> <a href="tel:+919876543210" style="color: #0F6B4B;">+91 98765 43210</a>
+                          </p>
+                          <p style="margin: 5px 0 0;">
+                              <i class="fas fa-envelope"></i> <a href="mailto:hello@kavinandesignstudio.com" style="color: #0F6B4B;">hello@kavinandesignstudio.com</a>
+                          </p>
+                      </div>
+                  </div>
+              `,
+              confirmButtonColor: '#0F6B4B',
+              confirmButtonText: 'OK',
+              background: '#F9F7F3'
+          });
       }
-    });
+  });
+  
+  // Helper function to escape HTML
+  function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
   }
+  
+  // Input focus effects
+  const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
+  formInputs.forEach(input => {
+      input.addEventListener('focus', () => {
+          input.parentElement.classList.add('focused');
+      });
+      input.addEventListener('blur', () => {
+          if (!input.value) {
+              input.parentElement.classList.remove('focused');
+          }
+      });
+      
+      // Check if input has value on load
+      if (input.value) {
+          input.parentElement.classList.add('focused');
+      }
+  });
+
+  // ========== BACK TO TOP BUTTON ==========
+  const backToTopBtn = document.getElementById('backToTop');
+
+  // Show/hide button based on scroll position
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+          backToTopBtn.classList.add('show');
+      } else {
+          backToTopBtn.classList.remove('show');
+      }
+  });
+
+  // Smooth scroll to top when clicked
+  backToTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  });
 </script>
 </body>
 </html>

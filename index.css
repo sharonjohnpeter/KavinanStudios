@@ -11,6 +11,7 @@
   --beige: #EAE4DA;
   --background: #F9F7F3;
   --foreground: #1E1E1E;
+  --shade:#78ae7b;
   --primary: var(--brand-green);
   --primary-foreground: #FFFFFF;
   --secondary: var(--beige);
@@ -63,7 +64,7 @@ img {
 
 /* ---------- TYPOGRAPHY UTILITIES ---------- */
 .text-gradient {
-  background: linear-gradient(90deg, var(--brand-orange), var(--brand-green));
+  background: linear-gradient(90deg, var(--brand-orange), var(--shade));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -220,7 +221,7 @@ img {
 }
 
 .logo-image {
-  height: 55px;
+  height: 65px;
   width: auto;
   max-width: 220px;
   object-fit: contain;
@@ -293,6 +294,7 @@ img {
 
 .mobile-nav.active {
   display: flex;
+  align-items: center;
 }
 
 .mobile-nav .nav-link {
@@ -876,7 +878,7 @@ img {
 }
 
 .footer-logo-image {
-  height: 50px;
+  height: 65px;
   width: auto;
   max-width: 200px;
   object-fit: contain;
@@ -963,26 +965,90 @@ img {
   letter-spacing: 2px;
 }
 
-/* ---------- WHATSAPP FLOAT ---------- */
-.whatsapp-float {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background-color: #25D366;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.8rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: var(--transition);
-  z-index: 100;
+/* ========== BACK TO TOP BUTTON ========== */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, var(--brand-orange), var(--shade));
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(242, 101, 34, 0.35);
+    transition: all 0.3s ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  background-color: #20b859;
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(242, 101, 34, 0.5);
+}
+
+.back-to-top-btn:active {
+    transform: scale(0.95);
+}
+
+/* Pulse ring animation */
+.back-to-top-btn::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, var(--brand-orange), var(--shade));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.back-to-top-btn:hover::before {
+    opacity: 1;
+    animation: pulseRing 1.2s ease-out infinite;
+}
+
+@keyframes pulseRing {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .back-to-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top-btn {
+        bottom: 80px;
+        right: 15px;
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+    }
 }
